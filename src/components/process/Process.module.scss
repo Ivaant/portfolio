@@ -1,0 +1,91 @@
+@import "../../styles/constants.scss";
+
+.process {
+  position: relative;
+  h2 {
+    font-size: 5rem;
+    @media only screen and (max-width: $md) {
+      font-size: 3rem;
+    }
+  }
+  &__stage {
+    align-items: flex-start;
+    @media only screen and (max-width: $sm) {
+      flex-direction: column;
+    }
+    row-gap: 2rem;
+    &_image {
+      padding: 2rem;
+      flex: 0 0 50%;
+      img {
+        display: block;
+        margin: auto;
+        width: 60%;
+        @media only screen and (max-width: $sm) {
+          width: 80%;
+        }
+      }
+    }
+    &_text {
+      padding: 2rem;
+      @media only screen and (max-width: $sm) {
+        text-align: center;
+      }
+    }
+  }
+  .progressbar {
+    position: absolute;
+    top: 20rem;
+    left: 45%;
+    height: 87%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 1.4rem;
+    @media only screen and (max-width: $sm) {
+      display: none;
+    }
+    .line {
+      position: absolute;
+      top: 0;
+      left: 48%;
+      height: 100%;
+      width: 2px;
+      background-image: linear-gradient(black 33%, rgba(255, 255, 255, 0) 0%);
+      background-position: right;
+      background-size: 2px 30px;
+      background-repeat: repeat-y;
+      z-index: 1;
+      border-radius: 5px;
+    }
+    > div {
+      flex: 1;
+      padding-top: 0.8rem;
+      z-index: 2;
+      .circle {
+        border-radius: 50%;
+        background: black;
+        width: 1.2rem;
+        height: 1.2rem;
+      }
+      .circle_1 {
+        background-color: $primary;
+      }
+      .circle_2 {
+        background-color: $secondary;
+      }
+      .circle_3 {
+        background-color: $primary-light;
+      }
+      .circle_4 {
+        background-color: $secondary-light;
+      }
+      .circle_5 {
+        background-color: $primary;
+      }
+      .circle_6 {
+        background-color: $secondary-dark;
+      }
+    }
+  }
+}

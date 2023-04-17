@@ -1,0 +1,59 @@
+@import "../../styles/constants.scss";
+
+.services {
+  h1 {
+    font-size: 5rem;
+    @media only screen and (max-width: $md) {
+      font-size: 3rem;
+    }
+  }
+  &__container {
+    @media only screen and (max-width: $sm) {
+      flex-direction: column;
+      row-gap: 3rem;
+    }
+    column-gap: 2rem;
+    &--left {
+      flex: 0 0 40%;
+      @media only screen and (max-width: $sm) {
+        flex: 0 0 100%;
+      }
+    }
+    &--right {
+      row-gap: 8rem;
+      @media only screen and (max-width: $sm) {
+        row-gap: 0;
+      }
+    }
+  }
+  &__card {
+    margin: 3rem;
+    padding: 2rem;
+    border: 1px solid $primary;
+    border-radius: 20px;
+    column-gap: 2rem;
+    &:hover {
+      cursor: pointer;
+      box-shadow: $shadow-light;
+    }
+    p {
+      font-size: 2rem;
+    }
+  }
+  &__icon {
+    padding: 1rem;
+    border-radius: 4rem;
+  }
+  &__feature-card {
+    column-gap: 2rem;
+    border-bottom: 1px solid $primary;
+    @media only screen and (max-width: $sm) {
+      margin: 3rem;
+      padding: 2rem;
+    }
+    &:hover {
+      cursor: pointer;
+      box-shadow: $shadow-light;
+    }
+  }
+}

@@ -1,0 +1,117 @@
+@import "../../styles/constants.scss";
+.projects {
+  &__container {
+    @media only screen and (max-width: $sm) {
+      flex-direction: column;
+      row-gap: 3rem;
+    }
+    h2 {
+      font-size: 5rem;
+      @media only screen and (max-width: $md) {
+        font-size: 3rem;
+      }
+    }
+  }
+
+  &__showCase {
+    gap: 3rem;
+  }
+}
+
+.project {
+  gap: 5rem;
+  @media only screen and (max-width: $md) {
+    flex-direction: column;
+  }
+  &__image {
+    padding: 2rem;
+    flex: 0 0 50%;
+    transition: all 0.3s;
+    img {
+      display: block;
+      margin: auto;
+      width: 60%;
+      border-radius: 2px;
+      @media only screen and (max-width: $lg) {
+        width: 80%;
+      }
+    }
+    img:hover {
+      box-shadow: $shadow-light;
+    }
+  }
+  &__image:hover {
+    transform: scale(1.1);
+  }
+  &__text {
+    @media only screen and (max-width: $md) {
+      width: 76%;
+    }
+    h3 {
+    }
+    p {
+    }
+    &_link {
+      gap: 4rem;
+
+      &_container {
+        display: flex;
+        justify-content: space-between;
+        gap: 1.5rem;
+        align-items: center;
+      }
+
+      a:link,
+      a:visited {
+        display: inline-block;
+        position: relative;
+        border-bottom: 2px solid $primary-light;
+        padding: 0.1rem 1.5rem;
+        color: inherit;
+        font-weight: 300;
+        text-decoration: none;
+        transform: scale(1);
+        transition: all 0.2s ease-in 0.2s;
+        z-index: 20;
+      }
+
+      a::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 3px;
+        border-radius: 5px;
+        background-color: $primary-light;
+        z-index: -1;
+        transform: scaleY(0);
+        transform-origin: bottom left;
+        transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s;
+      }
+      a:hover::before {
+        transform: scaleY(1);
+        width: 100%;
+      }
+
+      a:hover {
+        color: $color-white;
+        border-bottom: none;
+      }
+    }
+  }
+  &__techstack {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  &__tech-item {
+    padding: 0.1rem 1.5rem;
+    border-radius: 5px;
+    background-color: $secondary-light;
+    transition: all 0.3s ease-out;
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: $shadow-light;
+    }
+  }
+}

@@ -1,0 +1,84 @@
+@import "../../styles/constants.scss";
+
+.contact {
+  &__container {
+    min-height: 20rem;
+    gap: 5rem;
+    @media only screen and (max-width: $md) {
+      flex-direction: column;
+    }
+    &_left {
+      p {
+        text-align: start;
+      }
+    }
+    &_right {
+      flex: 0 0 46%;
+      @media only screen and (max-width: $md) {
+        flex: 0 0 100%;
+      }
+    }
+  }
+}
+
+.form {
+  &__element:not(:last-child) {
+    margin-bottom: 2rem;
+    textarea {
+      resize: none;
+    }
+  }
+  &__header {
+    span {
+      padding: 0 1rem;
+      background-color: $secondary-light;
+    }
+  }
+  &__input {
+    display: block;
+    width: 70%;
+    font-size: 2rem;
+    font-family: inherit;
+    padding: 1.5rem 2rem;
+    border-radius: 2px;
+    background-color: rgba($color-white, 0.5);
+    border: none;
+    border-bottom: 3px solid transparent;
+    @media only screen and (max-width: $md) {
+      width: 100%;
+    }
+  }
+  &__input:focus {
+    outline: none;
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.15);
+    border-bottom: 3px solid $secondary;
+  }
+  &__input:valid {
+    border-bottom: 3px solid $primary-light;
+  }
+  &__submit {
+    border: none;
+    font-size: 2rem;
+    font-family: inherit;
+  }
+  &__feedback {
+    align-items: center;
+    &_text {
+      span {
+        padding: 0 1rem;
+        background-color: $secondary-light;
+      }
+    }
+  }
+}
+
+.form__element .form__submit {
+  @media only screen and (max-width: $md) {
+    display: block;
+    margin: 3rem auto;
+  }
+}
+
+.contact__container .form__feedback {
+  align-items: center;
+}
