@@ -34,7 +34,12 @@ function Footer() {
               <a href="#">Twitter</a>
             </li>
             <li>
-              <a href="#">LinkedIn</a>
+              <a
+                href="https://www.linkedin.com/in/sergey-ivanoff"
+                target="_blank"
+              >
+                LinkedIn
+              </a>
             </li>
           </ul>
         </div>

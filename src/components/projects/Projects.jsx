@@ -51,14 +51,14 @@ const Projects = () => {
                 </span>
               </div>
             </a>
-            {/* <a href={project.git} target="_blank">
+            <a href={project.git} target="_blank">
               <div className={css.project__text_link_container}>
                 <span>Project Code</span>
                 <span>
                   <FiGithub size="2rem" />
                 </span>
               </div>
-            </a> */}
+            </a>
           </div>
         </motion.div>
       </motion.div>
